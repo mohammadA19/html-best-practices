@@ -257,6 +257,7 @@ Translations: [English](README.md) · [العربية](README.ar.md) · [বা�
 ###  استعمل دلالات الإتاحة الافتراضية لـ ARIA
 
 > الإتاحة هي تجهيز الواجهة لتكون سهلة الاستخدام لذوي الاحتياجات الخاصة.
+
 بعض العناصر لها قيمة ضمنية للصفة `role` التابعة لمواصفات ARIA، لا تعين قيمة لهذه الصفة.
 
 سيئ:
@@ -473,12 +474,11 @@ Translations: [English](README.md) · [العربية](README.ar.md) · [বা�
     <meta charset="UTF-8">
 
 
-### Specify character encoding at first
+### عيِّن ترميز المحارف أولًا
 
-Spec requires the character encoding is specified within the first 1024 bytes of
-the document.
+تطلب المواصفات تعيين ترميز المحارف في أول 1024 بايت من المستند.
 
-Bad:
+سيئ:
 
     <head>
       <meta content="width=device-width" name="viewport">
@@ -486,7 +486,7 @@ Bad:
       ...
     </head>
 
-Good:
+حسن:
 
     <head>
       <meta charset="UTF-8">
@@ -495,41 +495,41 @@ Good:
     </head>
 
 
-### Use UTF-8
+### استعمل UTF-8
 
-With UTF-8, you are free to use Emoji.
+مع UTF-8، أنت حر في استعمال الإيموجيات.
 
-Bad:
+سيئ:
 
     <meta charset="Shift_JIS">
 
-Good:
+حسن:
 
     <meta charset="UTF-8">
 
 
-### Omit `type` attribute for CSS
+### اترك الصفة `type` لـ CSS
 
-In HTML, default `type` attribute’s value of `style` element is `text/css`.
+القيمة الافتراضية للصفة `type` في العنصر `style` في HTML هي `text/css`.
 
-Bad:
+سيئ:
 
     <style type="text/css">
       ...
     </style>
 
-Good:
+حسن:
 
     <style>
       ...
     </style>
 
 
-### Don’t comment out contents of `style` element
+### لا تضف وسم التعليق إلى محتوى `style`
 
-This ritual is for the old browser.
+هذه الطقوس للمتصفحات القديمة.
 
-Bad:
+سيئ:
 
     <style>
     <!--
@@ -537,7 +537,7 @@ Bad:
       -->
     </style>
 
-Good:
+حسن:
 
     <style>
       ...
