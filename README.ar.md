@@ -423,18 +423,18 @@ Translations: [English](README.md) · [العربية](README.ar.md) · [বা�
     <link href="/css/high-contrast.css" rel="alternate stylesheet" title="High contrast">
 
 
-### For URL, use `link` element
+### لعناوين URL، استعمل العنصر `link`
 
-A value of `href` attribute can be resolved as URL.
+قيمة الصفة `href` يمكن تحليلها على أنها عنوان URL.
 
-Bad:
+سيئ:
 
     <section itemscope itemtype="http://schema.org/BlogPosting">
       <meta content="https://example.com/blog/hello" itemprop="url">
       ...
     </section>
 
-Good:
+حسن:
 
     <section itemscope itemtype="http://schema.org/BlogPosting">
       <link href="/blog/hello" itemprop="url">
@@ -442,17 +442,17 @@ Good:
     </section>
 
 
-### Specify document character encoding
+### عيِّن ترميز محارف المستند
 
-UTF-8 is not default in all browsers yet.
+الترميز UTF-8 ليس افتراضيًا بعد في كل المتصفحات.
 
-Bad:
+سيئ:
 
     <head>
       <title>HTML Best Practices</title>
     </head>
 
-Good:
+حسن:
 
     <head>
       <meta charset="UTF-8">
@@ -460,15 +460,15 @@ Good:
     </head>
 
 
-### Don’t use legacy character encoding format
+### لا تستعمل تنسيقا عتيقا لترميز المحارف
 
-HTTP headers should be specified by a server, be simple.
+تعيين ترويسات HTTP يجب أن يقوم به الخادم، كن بسيطًا.
 
-Bad:
+سيئ:
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-Good:
+حسن:
 
     <meta charset="UTF-8">
 
