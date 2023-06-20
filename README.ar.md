@@ -26,100 +26,99 @@ Translations: [English](README.md) · [العربية](README.ar.md) · [বা�
     </html>
 
 
-### Don’t use legacy or obsolete DOCTYPE
+### لا تستعمل DOCTYPE القديمة أو المهجورة
 
-DOCTYPE is not for DTD anymore, be simple.
+وسم DOCTYPE لم يعد يستعمل من أجل DTD، كن بسيطًا.
 
-Bad:
+سيئ:
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
       "http://www.w3.org/TR/html4/strict.dtd">
 
-Good:
+حسن:
 
     <!DOCTYPE html>
 
 
-### Don’t use XML Declaration
+### لا تستعمل إعلانات XML
 
-Are you sure you want to write XHTML?
+أنت متأكد أنك تريد أن تكتب XHTML?
 
-Bad:
+سيئ:
 
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <!DOCTYPE html>
 
-Good:
+جيد:
 
     <!DOCTYPE html>
 
 
-### Don’t use character references as much as possible
+### لا تستعمل مراجع المحارف قدر المستطاع
 
-If you write an HTML document with UTF-8, almost all characters (including
-Emoji) can be written directly.
+إذا كنت تكتب مستند HTML بالترميز UTF-8، فإنه تكاد تكون جميع المحارف (بما فيها
+الإيموجيات) قابلة لأن تكتب مباشرة.
 
-Bad:
+سيئ:
 
     <p><small>Copyright &copy; 2014 W3C<sup>&reg;</sup></small></p>
 
-Good:
+جيد:
 
     <p><small>Copyright © 2014 W3C<sup>®</sup></small></p>
 
 
-### Escape `&`, `<`, `>`, `"`, and `'` with named character references
+### اجعل خلوص المحارف `&` و `<` و `>` و `"` و `'` باستعمال المراجع المسماة
 
-These characters should escape always for a bug-free HTML document.
+استعمل الخلوص مع هذه المحارف دائما لكي يخلو لك مستند HTML من العلل.
 
-Bad:
+سيئ:
 
     <h1>The "&" character</h1>
 
-Good:
+جيد:
 
     <h1>The &quot;&amp;&quot; character</h1>
 
 
-### Use numeric character references for control or invisible characters
+### استعمل المراجع الرقمية للمحارف المخفية ومحارف التحكم
 
-These characters are easily mistaken for another character. And also spec does
-not guarantee to define a human readable name for these characters.
+هذه المحارف يمكن أن تختلط على الناظر ويظنها محارف أخرى، وكذلك لا تضمن المواصفات
+تعريف اسم لهذه المحارف يمكن أن يقرأه الإنسان.
 
-Bad:
+سيئ:
 
     <p>This book can read in 1 hour.</p>
 
-Good:
+جيد:
 
     <p>This book can read in 1&#xA0;hour.</p>
 
 
-### Put white spaces around comment contents
+### ضع مسافات بيضاء حول محتوى التعليق
 
-Some characters cannot be used immediately after comment open or before comment
-close.
+بعض المحارف لا يمكن استعمالها بعد قوس البداية مباشرة أو قبل قوس النهاية.
 
-Bad:
+سيئ:
 
     <!--This section is non-normative-->
 
-Good:
+جيد:
 
     <!-- This section is non-normative -->
 
 
-### Don’t omit closing tag
+### لا تترك وسوم الإغلاق
 
-I think you don’t understand a rule for omitting closing tag.
+أظن أنك لا تفهم قاعدة حذف وسم الإغلاق.
 
-Bad:
+سيئ:
 
     <html>
       <body>
         ...
 
-Good:
+جيد:
 
     <html>
       <body>
@@ -128,139 +127,139 @@ Good:
     </html>
 
 
-### Don’t mix empty element format
+### لا تخلط صيغ العناصر الفارغة
 
-Consistency is a key for readability.
+الاتساق هو مفتاح المقروئية.
 
-Bad:
+سيئ:
 
     <img alt="HTML Best Practices" src="/img/logo.png">
     <hr />
 
-Good:
+حسن:
 
     <img alt="HTML Best Practices" src="/img/logo.png">
     <hr>
 
 
-### Don’t put white spaces around tags and attribute values
+### لا تضع مسافات بيضائ حول الوسوم وقيم الصفات
 
-There is no reason for doing this.
+لا داعي لذلك.
 
-Bad:
+سيئ:
 
     <h1 class=" title " >HTML Best Practices</h1>
 
-Good:
+جيد:
 
     <h1 class="title">HTML Best Practices</h1>
 
 
-### Don’t mix character cases
+### لا تخلط حالات الأحرف
 
-It gives a consistency also.
+هذا يعطي اتساقًا أيضا.
 
-Bad:
+سيئ:
 
     <a HREF="#general">General</A>
 
-Good:
+جيد:
 
     <a href="#general">General</a>
 
-Also Good:
+جيد أيضًا:
 
     <A HREF="#general">General</A>
 
 
-### Don’t mix quotation marks
+### لا تخلط علامات الاقتباس
 
-Same as above.
+كما فوق.
 
-Bad:
+سيئ:
 
     <img alt="HTML Best Practices" src='/img/logo.jpg'>
 
-Good:
+حسن:
 
     <img alt="HTML Best Practices" src="/img/logo.jpg">
 
 
-### Don’t separate attributes with two or more white spaces
+### لا تفصل بين الصفات بأكثر من مسافة بيضاء واحدة
 
-Your weird formatting rule confuses someone.
+قاعدتك الغريبة في التنسيق محيرة لغيرك.
 
-Bad:
+سيئ:
 
     <input   name="q"  type="search">
 
-Good:
+جيد:
 
     <input name="q" type="search">
 
 
-### Omit boolean attribute value
+### اترك قيم الصفات المنطقية
 
-It’s easy to write, isn’t it?
+أليست أسهل كتابة؟
 
-Bad:
+سيئ:
 
     <audio autoplay="autoplay" src="/audio/theme.mp3">
 
-Good:
+حسن:
 
     <audio autoplay src="/audio/theme.mp3">
 
 
-### Omit namespaces
+### اترك مجالات الأسماء (namespaces)
 
-SVG and MathML can be used directly in an HTML document.
+يمكن استعمال SVG و MathML مباشرة في مستندات HTML.
 
-Bad:
+سيئ:
 
     <svg xmlns="http://www.w3.org/2000/svg">
       ...
     </svg>
 
-Good:
+جيد:
 
     <svg>
       ...
     </svg>
 
 
-### Don’t use XML attributes
+### لا تستعمل صفات XML
 
-We write an HTML document.
+نحن نكتب مستند HTML.
 
-Bad:
+سيئ:
 
     <span lang="ja" xml:lang="ja">...</span>
 
-Good:
+حسن:
 
     <span lang="ja">...</span>
 
 
-### Don’t mix `data-*`, Microdata, and RDFa Lite attributes with common attributes
+### لا تخلط الصفات على الشكل 'data-*' وصفات Microdata وصفات RDFa Lite مع الصفات العامة
 
-A tag string can be very complicated. This simple rule helps reading such tag
-string.
+يمكن أن يكون اسم الصفة معقدا، ولذا تساعد هذه القاعدة البسيطة على قراءة مثل هذه الصفات.
 
-Bad:
+سيئ:
 
     <img alt="HTML Best Practices" data-height="31" data-width="88" itemprop="image" src="/img/logo.png">
 
-Good:
+جيد:
 
     <img alt="HTML Best Practices" src="/img/logo.png" data-width="88" data-height="31" itemprop="image">
 
 
-### Prefer default implicit ARIA semantics
+###  استعمل دلالات الإتاحة الافتراضية لـ ARIA
 
-Some elements have an ARIA `role` implicitly in an HTML document, don’t specify them.
+> الإتاحة هي تجهيز الواجهة لتكون سهلة الاستخدام لذوي الاحتياجات الخاصة.
+بعض العناصر لها قيمة ضمنية للصفة `role` التابعة لمواصفات ARIA، لا تعين قيمة لهذه الصفة.
 
-Bad:
+سيئ:
 
     <nav role="navigation">
       ...
@@ -268,7 +267,7 @@ Bad:
 
     <hr role="separator">
 
-Good:
+جيد:
 
     <nav>
       ...
@@ -277,66 +276,66 @@ Good:
     <hr>
 
 
-## The root element
+## العنصر الجذر
 
 
-### Add `lang` attribute
+### أضف الصفة `lang`
 
-`lang` attribute will help translating an HTML document.
+الصفة `lang` تساعد في ترجمة مستند HTML.
 
-Bad:
+سيئ:
 
     <html>
 
-Good:
+حسن:
 
     <html lang="en-US">
 
 
-### Keep `lang` attribute value as short as possible
+### اجعل قيمة الصفة `lang` أقل ما يمكن
 
-Japanese is only used in Japan. So country code is not necessary.
+اللغة اليابانية تستعمل في اليابان فقط، لذا اسم الدولة ليس ضروريا.
 
-Bad:
+سيئ:
 
     <html lang="ja-JP">
 
-Good:
+حسن:
 
     <html lang="ja">
 
 
-### Avoid `data-*` as much as possible
+### تجنب `data-*` قدر المستطاع
 
-An appropriate attribute can be handled properly by browsers.
+الصفات المناسبة يتعامل معها المتصفح التعامل الصحيح.
 
-Bad:
+سيئ:
 
     <span data-language="french">chemises</span>
     ...
     <strong data-type="warning">Do not wash!</strong>
 
-Good:
+حسن:
 
     <span title="French"><span lang="fr">chemises</span></span>
     ...
     <strong class="warning">Do not wash!</strong>
 
 
-## Document metadata
+## البيانات الفوقية للمستند
 
 
-### Add `title` element
+### أضف العنصر `title`
 
-A value for `title` element is used by various application not only a browser.
+تستخدم تطبيقات عدة قيمة العنصر `title` وليست المتصفحات وحدها.
 
-Bad:
+سيئ:
 
     <head>
       <meta charset="UTF-8">
     </head>
 
-Good:
+حسن:
 
     <head>
       <meta charset="UTF-8">
@@ -344,11 +343,11 @@ Good:
     </head>
 
 
-### Don’t use `base` element
+### لا تستعمل العنصر `base`
 
-An absolute path or URL is safer for both developers and users.
+المسار المطلق أو عنوان URL أأمن للمطورين والمستخدمين
 
-Bad:
+سيئ:
 
     <head>
       ...
@@ -357,7 +356,7 @@ Bad:
       ...
     </head>
 
-Good:
+حسن:
 
     <head>
       ...
@@ -366,59 +365,59 @@ Good:
     </head>
 
 
-### Specify MIME type of minor linked resources
+### عيِّن نوع MIME للموارد في الروابط
 
-This is a hint how application handles this resource.
+هذه تلميحة لكيفية تعامل التطبيق مع هذا المورد.
 
-Bad:
+سيئ:
 
     <link href="/pdf" rel="alternate">
     <link href="/feed" rel="alternate">
     <link href="/css/screen.css" rel="stylesheet">
 
-Good:
+حسن:
 
     <link href="/pdf" rel="alternate" type="application/pdf">
     <link href="/feed" rel="alternate" type="application/rss+xml">
     <link href="/css/screen.css" rel="stylesheet">
 
 
-### Don’t link to `favicon.ico`
+### لا تشر إلى `favicon.ico`
 
-Almost all browsers fetch `/favicon.ico` automatically and asynchronously.
+تكاد كل المتصفحات تجلب الملف `/favicon.ico` تلقائيا وبالتوازي مع جلب الصفحة.
 
-Bad:
+سيئ:
 
     <link href="/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
 
-Good:
+جيد:
 
-    <!-- Place `favicon.ico` in the root directory. -->
+    <!-- ضع `favicon.ico` في الدليل الجذر. -->
 
 
-### Add `apple-touch-icon` link
+### أضف إشارة إلى `apple-touch-icon`
 
-A default request path for touch icon was changed suddenly.
+تغير المسار المبدئي لطلب أيقونة اللمس فجأة.
 
-Bad:
+سيئ:
 
-    <!-- Hey Apple! Please download `/apple-touch-icon.png`! -->
+    <!-- مرحبًا يا أبل، أرجو تنزيل الملف `/apple-touch-icon.png` -->
 
-Good:
+حسن:
 
     <link href="/apple-touch-icon.png" rel="apple-touch-icon">
 
 
-### Add `title` attribute to alternate stylesheets
+### أضف الصفة `title` لأوراق الأنماط البديلة
 
-A human readable label helps people selecting proper stylesheet.
+التسمية المقروءة تساعد الناس على اختيار ورقة الأنماط الصحيحة.
 
-Bad:
+سيئ:
 
     <link href="/css/screen.css" rel="stylesheet">
     <link href="/css/high-contrast.css" rel="alternate stylesheet">
 
-Good:
+حسن:
 
     <link href="/css/screen.css" rel="stylesheet">
     <link href="/css/high-contrast.css" rel="alternate stylesheet" title="High contrast">
