@@ -544,37 +544,37 @@ Translations: [English](README.md) · [العربية](README.ar.md) · [বা�
     </style>
 
 
-### Don’t mix tag for CSS and JavaScript
+### لا تخلط وسوم JavaScript مع وسوم CSS
 
-Sometimes `script` element blocks DOM construction.
+قد يعيق العنصر `script` إنشاء DOM.
 
-Bad:
+سيئ:
 
     <script src="/js/jquery.min.js"></script>
     <link href="/css/screen.css" rel="stylesheet">
     <script src="/js/main.js"></script>
 
-Good:
+حسن:
 
     <link href="/css/screen.css" rel="stylesheet">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/main.js"></script>
 
-Also good:
+حسن أيضا:
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/main.js"></script>
     <link href="/css/screen.css" rel="stylesheet">
 
 
-## Sections
+## الأقسام
 
 
-### Add `body` element
+### أضف العنصر `body`
 
-Sometimes `body` element is complemented in unexpected position by a browser.
+قد يكمِّل المتصفح أحيانا العنصر `body` في موضع غير متوقع.
 
-Bad:
+سيئ:
 
     <html>
       <head>
@@ -583,7 +583,7 @@ Bad:
       ...
     </html>
 
-Good:
+حسن:
 
     <html>
       <head>
@@ -595,76 +595,77 @@ Good:
     </html>
 
 
-### Forget about `hgroup` element
+### انس العنصر `hgroup`
 
-This element is not used very much.
+هذا العنصر لا يُستخدم كثيرًا.
 
-Bad:
+سيئ:
 
     <hgroup>
       <h1>HTML Best Practices</h1>
       <h2>For writing maintainable and scalable HTML documents.</h2>
     </hgroup>
 
-Good:
+حسن:
 
     <h1>HTML Best Practices</h1>
     <p>For writing maintainable and scalable HTML documents.</p>
 
 
-### Use `address` element only for contact information
+### استعمل العنصر `address` لمعلومات التواصل فقط
 
-`address` element is for email address, social network account, street address,
-telephone number, or something you can get in touch with.
+العنصر `address` لعنوان البريد الإلكتروني، وحساب التواصل الاجتماعي، وعنوان الشارع،
+ورقم الهاتف، وأي شيء يمكن الإتصال به.
 
-Bad:
+سيئ:
 
     <address>No rights reserved.</address>
 
-Good:
+حسن:
 
     <address>Contact: <a href="https://twitter.com/hail2u_">Kyo Nagashima</a></address>
 
 
-## Grouping content
+## تجميع المحتوى
 
 
-### Don’t start with newline in `pre` element
+### لا تبدأ بسطر جديد في العنصر `pre`
 
 A first newline will ignored in the browsers, but second and later are rendered.
+تتجاهل المتصفحات أول محرف انتهاء سطر (newline)، لكنها ستعالج بقية محارف انتهاء السطر بعد ذلك.
 
-Bad:
+سيئ:
 
     <pre>
     &lt;!DOCTYPE html&gt;
     </pre>
 
-Good:
+حسن:
 
     <pre>&lt;!DOCTYPE html&gt;
     </pre>
 
 
-### Use appropriate element in `blockquote` element
+### استعمل عناصر مناسبة في العنصر `blockquote`
 
-`blockquote` element’s content is a quote, not a chunks of characters.
+محتوى العنصر `blockquote` هو اقتباس، وليس صفًّا من الأحرف.
 
-Bad:
+سيئ:
 
     <blockquote>For writing maintainable and scalable HTML documents.</blockquote>
 
-Good:
+حسن:
 
     <blockquote>
       <p>For writing maintainable and scalable HTML documents.</p>
     </blockquote>
 
 
-### Don’t include attribution directly in `blockquote` element
+### لا تضع العزو داخل العنصر `blockquote`
 
-`blockquote` element’s content is a quote.
+محتوى العنصر `blockquote` هو اقتباس.
 
-Bad:
+سيئ:
 
     <blockquote>
       <p>For writing maintainable and scalable HTML documents.</p>
@@ -672,7 +673,7 @@ Bad:
       <p>— HTML Best Practices</p>
     </blockquote>
 
-Good:
+حسن:
 
     <blockquote>
       <p>For writing maintainable and scalable HTML documents.</p>
@@ -680,7 +681,7 @@ Good:
 
     <p>— HTML Best Practices</p>
 
-Also good:
+حسن أيضا:
 
     <figure>
       <blockquote>
@@ -691,18 +692,18 @@ Also good:
     </figure>
 
 
-### Write one list item per line
+### اجعل كل بند قائمة في سطر لوحده
 
-Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
-line is hard toooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo read.
+الســــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــطر
+الطويل صعب الــــــــــــــــــــــــــــــــــــــــــــــــــــــــــقراءة
 
-Bad:
+سيئ:
 
     <ul>
       <li>General</li><li>The root Element</li><li>Sections</li>...
     </ul>
 
-Good:
+حسن:
 
     <ul>
       <li>General</li>
